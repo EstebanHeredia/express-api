@@ -6,17 +6,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static(__dirname + "/public"));
 
-app.use("/", require("./router/appsRoutes"));
-
 app.use("/api/productos", require("./router/appsRoutes"));
-
-app.get("/api/productos/:id", require("./router/appsRoutes"));
-
-app.post("/api/productos", require("./router/appsRoutes"));
-
-app.put("/api/productos/:id", require("./router/appsRoutes"));
-
-app.delete("/api/productos/:id", require("./router/appsRoutes"));
 
 const port = 8080;
 app.listen(port, () => {
