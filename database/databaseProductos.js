@@ -35,7 +35,7 @@ const databaseProductos = {
     if (!producto) {
       throw new Error("No se encuentra relación con dicho producto");
     }
-    return;
+    return producto;
   },
   insertarProducto: (datos) => {
     const producto = datos;
