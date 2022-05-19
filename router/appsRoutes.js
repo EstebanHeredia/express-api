@@ -3,16 +3,16 @@ const router = express.Router();
 const { controlador } = require("../controllers/controllers");
 
 // Listar información API
-router.get("/", controlador.getInfo);
+router.get("/info", controlador.getInfo);
 // Devolver productos
-router.get("/api/productos", controlador.getProductos);
+router.get("/", controlador.getProductos);
 // Devolver productos por ID
-router.get("/api/productos/:id", controlador.getProducto);
+router.get("/:id", controlador.getProducto);
 // Insertar productos
-router.post("/api/productos", controlador.postInsertar);
+router.post("/", controlador.postInsertar);
 // Actualizar productos
-router.put("/api/productos/:id", controlador.putActualizar);
+router.put("/:id", controlador.putActualizar);
 // Borrar productos
-router.delete("/api/productos/:id", controlador.delBorrar);
+router.delete("/:id", controlador.delBorrar);
 
 module.exports = router;
